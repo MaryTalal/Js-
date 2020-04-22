@@ -1,0 +1,20 @@
+<!doctype html>
+ 
+<html>
+<head>
+	<meta charset="utf-8"/>
+	
+</head>
+<body>
+  <script type="text/javascript" href="JavaScript.js">
+  	function sum(){
+  		const amount = ((accumulator, currentValue) => accumulator + currentValue
+  			);
+  		return this.reduce(amount);
+  	}
+
+  	//console.log(sum.call([1, -1, 2, 3]));
+    document.write(sum.call([5, 5, 5, 5, 5, 5, 5, 5, 5]));
+  </script>
+</body>
+</html>

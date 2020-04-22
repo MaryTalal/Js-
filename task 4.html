@@ -1,0 +1,24 @@
+<!doctype html>
+ 
+<html>
+<head>
+	<meta charset="utf-8"/>
+	
+</head>
+<body>
+  <script type="text/javascript" href="JavaScript.js">
+  	  
+function User(name) {
+	this.name = name;	
+}
+
+User.prototype.getName = function() {
+	return this.name
+}
+
+const me = new User('Rex');
+alert(me.getName());
+//console.log(me.getName()); // Rex
+  </script>
+</body>
+</html>
