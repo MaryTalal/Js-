@@ -23,7 +23,19 @@ const object3 = {
 };
 
 function isEquivalent(obj1, obj2){
-return JSON.stringify(obj1)===JSON.stringify(obj2);
+
+	var object1 = Object.getOwnPropertyNames(obj1);
+	var object2 = Object.getOwnPropertyNames(obj2);
+	if (object1.length != object2.length) {
+		return false;
+	}
+	for (var i = 0; i < object1.length; i++) {
+		var objName = object1[i];
+		if (obj1[objName] !== obj2[objName]) {
+			return false;
+		}
+	}
+	return true;
 }
 console.log(isEquivalent(object1, object2)); // true
 console.log(isEquivalent(object1, object3)); // false
