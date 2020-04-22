@@ -8,9 +8,8 @@
 <body>
   <script type="text/javascript" href="JavaScript.js">
   	function sum(){
-  		const amount = ((accumulator, currentValue) => accumulator + currentValue
+  		return this.reduce((accumulator, currentValue) => accumulator + currentValue
   			);
-  		return this.reduce(amount);
   	}
 
   	//console.log(sum.call([1, -1, 2, 3]));
